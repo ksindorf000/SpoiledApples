@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <h1>Hello World!</h1>
-        <form id="form1" runat="server">
-            <div>
-            </div>
-        </form>
+        <% foreach (var movie in Movies)
+            { %>
+        <%= movie.Title %>
+        <% } %>
     </div>
 </body>
 </html>
