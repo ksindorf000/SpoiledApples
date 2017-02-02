@@ -134,6 +134,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddMovie.aspx" />
     <Content Include="css\appstyles.css" />
     <Content Include="css\materialize.css" />
     <Content Include="Default.aspx" />
@@ -141,6 +142,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMovie.aspx.cs">
+      <DependentUpon>AddMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMovie.aspx.designer.cs">
+      <DependentUpon>AddMovie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -152,6 +160,10 @@
     <Compile Include="Migrations\201702021856261_Initial.Designer.cs">
       <DependentUpon>201702021856261_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702021944137_ChangedReleaseDateToString.cs" />
+    <Compile Include="Migrations\201702021944137_ChangedReleaseDateToString.Designer.cs">
+      <DependentUpon>201702021944137_ChangedReleaseDateToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\Review.cs" />
@@ -161,6 +173,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702021856261_Initial.resx">
       <DependentUpon>201702021856261_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702021944137_ChangedReleaseDateToString.resx">
+      <DependentUpon>201702021944137_ChangedReleaseDateToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
