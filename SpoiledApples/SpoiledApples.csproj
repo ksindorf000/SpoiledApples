@@ -138,7 +138,7 @@
     <Content Include="AddReview.aspx" />
     <Content Include="css\appstyles.css" />
     <Content Include="css\materialize.css" />
-    <Content Include="css\palette.css" />
+    <Content Include="css\palette-browngreen.css" />
     <Content Include="Default.aspx" />
     <Content Include="EditMovie.aspx" />
     <Content Include="js\materialize.js" />

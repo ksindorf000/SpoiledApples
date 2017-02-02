@@ -16,16 +16,24 @@ namespace SpoiledApples
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var movieId = int.Parse(Request.QueryString["id"]);
-
             using (var db = new ReviewContext())
             {
+                var movieId = int.Parse(Request.QueryString["id"]);
                 movieInstance = db.Movies.First(m => m.Id == movieId);
 
                 if (IsPostBack)
                 {
-                    movieInstance.Title = Request.Form["title"];
+                    
+                    string title = Request.Form["title"];
+                    string genre = Request.Form["genre"];
+                    string imdbURL = Request.Form["imdbURL"];
+                    DateTime release = Convert.ToDateTime(Request.Form["release"]);
+
+                    if (title != "")
+                    { movieInstance.Title = title }
+
                     movieInstance.Genre = Request.Form["genre"];
+                    movieInstance.IMDB = Request.Form["imdbURL"];
                     movieInstance.ReleaseDate = Request.Form["release"];
 
                     db.Entry(movieInstance).State = EntityState.Modified;
@@ -33,11 +41,11 @@ namespace SpoiledApples
                     Response.Redirect("Default.aspx");
 
                     db.SaveChanges();
+
+                    Response.Redirect("Default.aspx");
+
                 }
             }
-
-            Response.Redirect("Default.aspx");
-
         }
 
     }
