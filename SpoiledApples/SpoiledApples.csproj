@@ -135,9 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddMovie.aspx" />
+    <Content Include="AddReview.aspx" />
     <Content Include="css\appstyles.css" />
     <Content Include="css\materialize.css" />
+    <Content Include="css\palette.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EditMovie.aspx" />
     <Content Include="js\materialize.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -149,12 +152,26 @@
     <Compile Include="AddMovie.aspx.designer.cs">
       <DependentUpon>AddMovie.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AddReview.aspx.cs">
+      <DependentUpon>AddReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddReview.aspx.designer.cs">
+      <DependentUpon>AddReview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMovie.aspx.cs">
+      <DependentUpon>EditMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMovie.aspx.designer.cs">
+      <DependentUpon>EditMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201702021856261_Initial.cs" />
     <Compile Include="Migrations\201702021856261_Initial.Designer.cs">

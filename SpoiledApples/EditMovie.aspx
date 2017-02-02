@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SpoiledApples.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddMovie.aspx.cs" Inherits="SpoiledApples.AddMovie" %>
 
 <!DOCTYPE html>
 
@@ -6,8 +6,6 @@
 <head runat="server">
     <link href="css/materialize.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <link href="css/palette.css" rel="up" type="text/css" />
-
     <title>Spoiled Apples</title>
 </head>
 <body>
@@ -29,26 +27,18 @@
     <div class="container">
 
         <!--------------HEADING----------------->
+        <h3>Edit <%= movieInstance.Title %></h3>
 
-        <h1>Hello World!</h1>
-
-        <!--------------MOVIES----------------->
-        <div class="row">
-            <% foreach (var movie in Movies)
-                { %>
-            <div class="col s4 m4 card deep-orange" style="margin: 5px 5px 17px 5px">
-                <div class="card-content white-text">
-                    <span class="card-title"><%= movie.Title %></span>
-                        <a href="AddReview.aspx?id=<%= movie.Id %>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                    <div class="card-content">
-                        <p>
-                            <%= movie.Genre %>
-                        </p>
-                    </div>
-                </div>
+        <!--------------NEW MOVIE----------------->
+        <form runat="server" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="title" placeholder="Title" />
+                <input type="text" class="form-control" name="genre" placeholder="Genre" />
+                <input type="text" class="form-control" name="imdbURL" placeholder="IMDB URL" />
+                <input type="date" class="form-control" name="release" />
+                <input type="submit" class="btn btn-default" value="Save" />
             </div>
-            <% } %>
-        </div>
+        </form>
 
         <!--------------END MAIN CONTAINER----------------->
     </div>

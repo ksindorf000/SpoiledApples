@@ -4554,6 +4554,7 @@ small {
 
 .card.medium {
   height: 400px;
+  width: 400px;
 }
 
 .card.large {

@@ -17,8 +17,7 @@
                 <a href="#" class="brand-logo">Logo</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="Default.aspx">All Movies</a></li>
-                    <%--<li><a href="AddReview.aspx">Add Review</a></li>--%>
-                    <li><a href="AddMovie.aspx">Add/Edit Movie</a></li>
+                    <li><a href="AddMovie.aspx">Add Movie</a></li>
                 </ul>
             </div>
         </div>
@@ -29,7 +28,7 @@
 
         <!--------------HEADING----------------->
 
-        <h1>Hello World!</h1>
+        <h1>Add New Movie</h1>
 
         <!--------------NEW MOVIE----------------->
         <form runat="server" method="post">
@@ -38,7 +37,7 @@
                 <input type="text" class="form-control" name="genre" placeholder="Genre" />
                 <input type="text" class="form-control" name="imdbURL" placeholder="IMDB URL" />
                 <input type="date" class="form-control" name="release" />
-                <input type="submit" class="btn btn-default" value="Add" />
+                <input type="submit" class="btn btn-default" value="Save" />
             </div>
         </form>
 
