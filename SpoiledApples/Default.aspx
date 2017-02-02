@@ -10,10 +10,21 @@
 <body>
     <div class="container">
         <h1>Hello World!</h1>
-        <% foreach (var movie in Movies)
-            { %>
-        <%= movie.Title %>
-        <% } %>
+        <div class="row">
+
+            <% foreach (var movie in Movies)
+                { %>
+            <div class="grid-example col s6 m4">
+                <span class="flow-text">
+                    <h4><%= movie.Title %></h4>
+                    <p>
+                        <%= movie.Genre %>
+                    </p>
+                </span>
+            </div>
+            <% } %>
+        </div>
+
     </div>
 </body>
 </html>
