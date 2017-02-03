@@ -37,17 +37,18 @@
         <div class="row">
             <% foreach (var movie in Movies)
                 { %>
-            <div class="col s4 m4 card dark-primary-color" style="margin: 5px 5px 17px 5px">
-                <div class="card-content white-text">
-                    <span class="card-title"><%= movie.Title %></span>
-                    <a href="AddReview.aspx?id=<%= movie.Id %>" 
-                        class="btn-floating halfway-fab waves-effect waves-light green">
-                        <i class="material-icons accent-color">comment</i>
-                    </a>
-                    <div class="card-content">
+            <div class="col s12 m4">
+                <div class="card dark-primary-color">
+                    <div class="card-content white-text">
+                        <span class="card-title"><%= movie.Title %></span>
+                        <a href="AddReview.aspx?id=<%= movie.Id %>"
+                            class="btn-floating halfway-fab waves-effect waves-light green">
+                            <i class="material-icons accent-color">comment</i>
+                        </a>
                         <p>
                             <%= movie.Genre %>
                         </p>
+
                     </div>
                 </div>
             </div>
@@ -55,8 +56,7 @@
         </div>
 
         <a href="AddMovie.aspx" class="btn-floating waves-effect waves-light red" style=""><i class="material-icons">add</i></a>
-
-
+        
         <!--------------END MAIN CONTAINER----------------->
     </div>
 </body>
