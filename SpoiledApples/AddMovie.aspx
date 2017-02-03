@@ -5,13 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="css/materialize.css" rel="stylesheet" type="text/css" />
-    <link href="css/appstyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/appstyles.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="css/palette-browngreen.css" rel="stylesheet" type="text/css" />
 
     <title>Spoiled Apples</title>
 </head>
-<body style="background-color: #D7CCC8">
+<body class="light-primary-color">
 
     <!--------------NAVIGATION----------------->
     <nav>
@@ -27,11 +27,7 @@
     </nav>
 
     <!--------------MAIN CONTAINER----------------->
-    <div class="container">
-
-        <!--------------HEADING----------------->
-
-        <h3 style="text-align: center">Add New Movie</h3>
+    <div class="container ex-top-margin">
 
         <!--------------NEW MOVIE----------------->
         <form runat="server" method="post">

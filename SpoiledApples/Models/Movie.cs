@@ -11,6 +11,7 @@ namespace SpoiledApples.Models
         public string Title { get; set; }
         public string Genre { get; set; }
         public string IMDB { get; set; }
+        public string imgURL { get; set; }
         public string ReleaseDate { get; set; }
     }
 }

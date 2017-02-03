@@ -181,6 +181,10 @@
     <Compile Include="Migrations\201702021944137_ChangedReleaseDateToString.Designer.cs">
       <DependentUpon>201702021944137_ChangedReleaseDateToString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702031804156_AddedImgURLToMovieTable.cs" />
+    <Compile Include="Migrations\201702031804156_AddedImgURLToMovieTable.Designer.cs">
+      <DependentUpon>201702031804156_AddedImgURLToMovieTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\Review.cs" />
@@ -193,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702021944137_ChangedReleaseDateToString.resx">
       <DependentUpon>201702021944137_ChangedReleaseDateToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702031804156_AddedImgURLToMovieTable.resx">
+      <DependentUpon>201702031804156_AddedImgURLToMovieTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
