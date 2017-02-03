@@ -29,42 +29,47 @@
     <!--------------MAIN CONTAINER----------------->
     <div class="container ex-top-margin">
 
-            <!--------------MOVIES----------------->
-            <div class="row">
-                <%-- (+) restrict to 6 most recently released movies 
+        <!--------------MOVIES----------------->
+        <div class="row">
+            <%-- (+) restrict to 6 most recently released movies 
                 and add new page that lists all movies alphabetically
-                --%>
-                <% foreach (var movie in Movies)
-                    { %>
-                <div class="col s12 m4">
-                    <div class="card horizontal accent-red">
-                        <div class="card-image">
-                            <img src="<%= movie.imgURL %>" />
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content primary-text-color">
-                                <span class="card-title"><%= movie.Title %></span>
-                                <a href="AddReview.aspx?id=<%= movie.Id %>"
-                                    class="btn-floating halfway-fab waves-effect waves-light green">
-                                    <i class="material-icons accent-color">comment</i>
-                                </a>
-                                <p>
-                                    <%= movie.Genre %>
-                                </p>
-                            </div>
+            --%>
+            <% foreach (var movie in Movies)
+                { %>
+            <div class="col s12 m4">
+                <div class="card horizontal default-primary-color">
+                    <div class="card-image">
+                        <a href="EditMovie.aspx?id=<%= movie.Id %>">
+                            <img src="<%= movie.imgURL %>" class="thumbnail-img" />
+                        </a>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content primary-text-color">
+                            <span class="card-title"><%= movie.Title %></span>
+                            <a href="AddReview.aspx?id=<%= movie.Id %>"
+                                class="btn-floating halfway-fab waves-effect waves-light green">
+                                <i class="material-icons accent-color">comment</i>
+                            </a>
+                            <sup><%= movie.Genre %> </sup>
+                            <p>
+                                <span class="avg">
+                                    <%= avgStr %>
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <% } %>
             </div>
+            <% } %>
+        </div>
 
-            <a href="AddMovie.aspx" class="btn-floating waves-effect waves-light red" style=""><i class="material-icons">add</i></a>
+        <a href="AddMovie.aspx" class="btn-floating waves-effect waves-light red" style=""><i class="material-icons">add</i></a>
 
-            <!--------------END MAIN CONTAINER----------------->
+        <!--------------END MAIN CONTAINER----------------->
     </div>
-                <!--------------JavaScript Source----------------->
+    <!--------------JavaScript Source----------------->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
 </body>
 </html>
