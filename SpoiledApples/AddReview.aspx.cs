@@ -14,6 +14,7 @@ namespace SpoiledApples
         public Review reviewInstance;
         bool valid = true;
         public Movie movieInstance;
+        public List<Review> reviewList;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,6 +22,7 @@ namespace SpoiledApples
             {
                 var movieId = int.Parse(Request.QueryString["id"]);
                 movieInstance = db.Movies.First(m => m.Id == movieId);
+                reviewList = db.Reviews.Where(r => r.MovieId == movieId).ToList();
 
                 //if (ratingInt > 10 || ratingInt < 1)
                 //{

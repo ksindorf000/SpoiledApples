@@ -27,23 +27,20 @@ namespace SpoiledApples
                     string title = Request.Form["title"];
                     string genre = Request.Form["genre"];
                     string imdbURL = Request.Form["imdbURL"];
-                    DateTime release = Convert.ToDateTime(Request.Form["release"]);
+                    string release = Request.Form["release"];
 
-                    if (title != "")
-                    { movieInstance.Title = title }
+                    if (title != "") { movieInstance.Title = title; }
 
-                    movieInstance.Genre = Request.Form["genre"];
-                    movieInstance.IMDB = Request.Form["imdbURL"];
-                    movieInstance.ReleaseDate = Request.Form["release"];
+                    if (genre != "") { movieInstance.Genre = genre; }
 
+                    if (imdbURL != "") { movieInstance.IMDB = imdbURL; }
+
+                    if (release != "") { movieInstance.ReleaseDate = release; }
+                    
                     db.Entry(movieInstance).State = EntityState.Modified;
                     db.SaveChanges();
                     Response.Redirect("Default.aspx");
-
-                    db.SaveChanges();
-
-                    Response.Redirect("Default.aspx");
-
+                    
                 }
             }
         }

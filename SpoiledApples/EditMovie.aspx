@@ -17,7 +17,7 @@
     <nav>
         <div class="nav-wrapper accent-color">
             <div class="container">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" class="brand-logo">Spoiled Apples</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="Default.aspx">All Movies</a></li>
                     <li><a href="AddMovie.aspx">Add Movie</a></li>
@@ -30,7 +30,7 @@
     <div class="container">
 
         <!--------------HEADING----------------->
-        <h3>Edit <%= movieInstance.Title %></h3>
+        <h3 style="text-align: center">Edit <%= movieInstance.Title %></h3>
 
         <!--------------NEW MOVIE----------------->
         <form runat="server" method="post">
