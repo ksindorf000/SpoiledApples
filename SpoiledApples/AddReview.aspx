@@ -58,7 +58,7 @@
                 <div class="card-content white-text">
                     <p>
                         <%= movieInstance.Genre %> - Released: <%= movieInstance.ReleaseDate %><br />
-                        <span class="avg accent-color"><%= avgRating %>/10</span>
+                        <span class="avg"><%= movieInstance.AverageRating %>/10</span>
                     </p>
                 </div>
                 <div class="card-action">
@@ -70,39 +70,38 @@
             </div>
         </div>
 
-    <!--------------REVIEWS----------------->
-    <div class="row">
-        <div class="col sm12 md4">
-            <table class="striped bordered">
-                <thead>
+        <!--------------REVIEWS----------------->
+        <div class="row">
+            <div class="col sm12 md4">
+                <table class="striped bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Reviewer</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <% if (reviewList.Count() == 0)
+                        { %>
                     <tr>
-                        <th>ID</th>
-                        <th>Reviewer</th>
-                        <th>Rating</th>
+                        <td colspan="3">Gold star! You're the first review!</td>
                     </tr>
-                </thead>
-                <% if (reviewList.Count() == 0)
-                    { %>
-                <tr>
-                    <td colspan="3">Gold star! You're the first review!</td>
-                </tr>
-                <% } %>
-                <% else
-                    { %>
-                <% foreach (var review in reviewList)
-                    { %>
-                <tr>
-                    <td><%=review.Id %></td>
-                    <td><%=review.Reviewer %></td>
-                    <td><%=review.Rating %>/10</td>
-                </tr>
-                <% } %>
-                <% } %>
-            </table>
+                    <% } %>
+                    <% else
+                        { %>
+                    <% foreach (var review in reviewList)
+                        { %>
+                    <tr>
+                        <td><%=review.Id %></td>
+                        <td><%=review.Reviewer %></td>
+                        <td><%=review.Rating %>/10</td>
+                    </tr>
+                    <% } %>
+                    <% } %>
+                </table>
+            </div>
+
+            <!--------------END MAIN CONTAINER----------------->
         </div>
-
-        <!--------------END MAIN CONTAINER----------------->
-    </div>
-
 </body>
 </html>

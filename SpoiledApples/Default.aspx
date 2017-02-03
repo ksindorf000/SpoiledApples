@@ -53,7 +53,7 @@
                             <sup><%= movie.Genre %> </sup>
                             <p>
                                 <span class="avg">
-                                    <%= avgStr %>
+                                    <%= movie.AverageRating %>
                                 </span>
                             </p>
                         </div>

@@ -13,5 +13,6 @@ namespace SpoiledApples.Models
         public string IMDB { get; set; }
         public string imgURL { get; set; }
         public string ReleaseDate { get; set; }
+        public double AverageRating { get; set; }
     }
 }

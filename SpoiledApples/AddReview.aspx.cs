@@ -12,7 +12,7 @@ namespace SpoiledApples
     public partial class AddReview : System.Web.UI.Page
     {
         public Review reviewInstance;
-        bool valid = true;
+        //bool valid = true;
         public Movie movieInstance;
         public List<Review> reviewList;
         public double avgRating;
@@ -42,22 +42,32 @@ namespace SpoiledApples
                     {
                         Reviewer = Request.Form["name"],
                         Rating = ratingInt,
-                        MovieId = movieId
+                        MovieId = movieId,
                     };
+
                     db.Reviews.Add(review);
+                    db.SaveChanges();
+                    
+                    /*********************Repopulate Review List***********************/
+                    reviewList.ToList();
+
+                    /*********************Calculate Average***********************/
+                    foreach (var reviewInst in reviewList)
+                    {
+                        avgRating += reviewInst.Rating;
+                    }
+
+                    avgRating /= reviewList.Count();
+
+                    movieInstance.AverageRating = avgRating;
+
+                    db.Entry(movieInstance).State = EntityState.Modified;
+
                     db.SaveChanges();
                     //}
 
                     Response.Redirect("Default.aspx");
                 }
-                /*********************Calculate Average***********************/
-
-                foreach (var review in reviewList)
-                {
-                    avgRating += review.Rating;
-                }
-
-                avgRating /= reviewList.Count();
                 
             }
         }
