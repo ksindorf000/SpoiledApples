@@ -20,7 +20,7 @@
                 <a href="#" class="brand-logo">Spoiled Apples</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="Default.aspx">All Movies</a></li>
-                    <li><a href="AddMovie.aspx">Add Movie</a></li>
+                    <li><a href="AllReviews.aspx">All Reviews</a></li>
                 </ul>
             </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="container ex-top-margin">
 
         <!--------------HEADING----------------->
-        <h3 style="text-align: center">Edit <%= movieInstance.Title %></h3>
+        <h4>Edit <%= movieInstance.Title %></h4>
 
         <!--------------NEW MOVIE----------------->
         <form runat="server" method="post">
@@ -38,6 +38,7 @@
                 <input type="text" class="form-control primary-text-color" name="title" value="<%= movieInstance.Title %>" />
                 <input type="text" class="form-control primary-text-color" name="genre" value="<%= movieInstance.Genre %>" />
                 <input type="text" class="form-control primary-text-color" name="imdbURL" value="<%= movieInstance.IMDB %>" />
+                <input type="text" class="form-control primary-text-color" name="img" value="<%= movieInstance.imgURL %>" />
                 <input type="date" class="form-control primary-text-color" name="release" />
                 <input type="submit" class="btn btn-default" value="Save" />
             </div>

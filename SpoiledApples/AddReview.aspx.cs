@@ -15,7 +15,7 @@ namespace SpoiledApples
         //bool valid = true;
         public Movie movieInstance;
         public List<Review> reviewList;
-        public double avgRating;
+        public string avgStr;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,7 +37,8 @@ namespace SpoiledApples
                 if (IsPostBack)
                 {
                     int ratingInt = int.Parse(Request.Form["rating"]);
-
+                    double avgRating = 0
+                        ;
                     var review = new Review
                     {
                         Reviewer = Request.Form["name"],
@@ -57,7 +58,7 @@ namespace SpoiledApples
                         avgRating += reviewInst.Rating;
                     }
 
-                    avgRating /= reviewList.Count();
+                    avgRating /= (reviewList.Count()+1);
 
                     movieInstance.AverageRating = avgRating;
 
@@ -65,7 +66,7 @@ namespace SpoiledApples
 
                     db.SaveChanges();
                     //}
-
+                    avgStr = String.Format("{0:00.0}", avgRating.ToString());
                     Response.Redirect("Default.aspx");
                 }
                 

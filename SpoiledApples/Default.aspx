@@ -20,7 +20,7 @@
                 <a href="#" class="brand-logo">Spoiled Apples</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="Default.aspx">All Movies</a></li>
-                    <li><a href="AddMovie.aspx">Add Movie</a></li>
+                    <li><a href="AllReviews.aspx">All Reviews</a></li>
                 </ul>
             </div>
         </div>
@@ -45,17 +45,17 @@
                     </div>
                     <div class="card-stacked">
                         <div class="card-content primary-text-color">
-                            <span class="card-title"><%= movie.Title %></span>
+                            <span class="card-title white-text"><%= movie.Title %></span>
                             <a href="AddReview.aspx?id=<%= movie.Id %>"
                                 class="btn-floating halfway-fab waves-effect waves-light green">
                                 <i class="material-icons accent-color">comment</i>
                             </a>
                             <sup><%= movie.Genre %> </sup>
-                            <p>
+                            <div class="card-action">
                                 <span class="avg">
-                                    <%= movie.AverageRating %>
+                                    <%= string.Format("{0:00.0}", movie.AverageRating.ToString()) %>/10 
                                 </span>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,8 +67,8 @@
 
         <!--------------END MAIN CONTAINER----------------->
     </div>
-    <!--------------JavaScript Source----------------->
 
+    <!--------------JavaScript Source----------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
 </body>

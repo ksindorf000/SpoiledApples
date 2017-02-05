@@ -22,6 +22,7 @@ namespace SpoiledApples
                         Title = Request.Form["title"],
                         Genre = Request.Form["genre"],
                         IMDB = Request.Form["imdbURL"],
+                        imgURL = Request.Form["img"],
                         ReleaseDate = Request.Form["release"]
                     };
 

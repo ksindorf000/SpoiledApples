@@ -20,7 +20,7 @@
                 <a href="#" class="brand-logo">Spoiled Apples</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="Default.aspx">All Movies</a></li>
-                    <li><a href="AddMovie.aspx">Add Movie</a></li>
+                    <li><a href="AllReviews.aspx">All Reviews</a></li>
                 </ul>
             </div>
         </div>
@@ -29,12 +29,16 @@
     <!--------------MAIN CONTAINER----------------->
     <div class="container ex-top-margin">
 
+         <!--------------HEADING----------------->
+        <h4>Add Movie</h4>
+
         <!--------------NEW MOVIE----------------->
         <form runat="server" method="post">
             <div class="form-group">
                 <input type="text" class="form-control" name="title" placeholder="Title" />
                 <input type="text" class="form-control" name="genre" placeholder="Genre" />
                 <input type="text" class="form-control" name="imdbURL" placeholder="IMDB URL" />
+                <input type="text" class="form-control" name="img" placeholder="Image URL" />
                 <input type="date" class="form-control" name="release" />
                 <input type="submit" class="btn btn-default" value="Save" />
             </div>

@@ -28,12 +28,15 @@ namespace SpoiledApples
                     string genre = Request.Form["genre"];
                     string imdbURL = Request.Form["imdbURL"];
                     string release = Request.Form["release"];
+                    string img = Request.Form["img"];
 
                     if (title != "") { movieInstance.Title = title; }
 
                     if (genre != "") { movieInstance.Genre = genre; }
 
                     if (imdbURL != "") { movieInstance.IMDB = imdbURL; }
+
+                    if (img != "") { movieInstance.imgURL = img; }
 
                     if (release != "") { movieInstance.ReleaseDate = release; }
                     
