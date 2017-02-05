@@ -17,7 +17,7 @@
     <nav>
         <div class="nav-wrapper accent-color">
             <div class="container">
-                <a href="#" class="brand-logo">Spoiled Apples</a>
+                <a href="Default.aspx" class="brand-logo">Spoiled Apples</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="Default.aspx">All Movies</a></li>
                     <li><a href="AllReviews.aspx">All Reviews</a></li>
