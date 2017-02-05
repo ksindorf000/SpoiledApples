@@ -30,6 +30,8 @@
     <div class="container ex-top-margin">
 
         <!--------------MOVIES----------------->
+        <a href="AddMovie.aspx" class="btn-floating waves-effect waves-light red"><i class="material-icons">add</i></a>
+
         <div class="row">
             <%-- (+) restrict to 6 most recently released movies 
                 and add new page that lists all movies alphabetically
@@ -63,7 +65,6 @@
             <% } %>
         </div>
 
-        <a href="AddMovie.aspx" class="btn-floating waves-effect waves-light red" style=""><i class="material-icons">add</i></a>
 
         <!--------------END MAIN CONTAINER----------------->
     </div>
