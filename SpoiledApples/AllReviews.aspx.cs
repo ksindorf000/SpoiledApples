@@ -17,6 +17,7 @@ namespace SpoiledApples
         {
             using (var db = new ReviewContext())
             {
+                //https://msdn.microsoft.com/en-us/library/bb738708(v=vs.110).aspx
                 reviewList = db.Reviews
                            .Include(r => r.Movie)
                            .OrderBy(r => r.Movie.Title)

@@ -32,6 +32,8 @@ namespace SpoiledApples
                 //else
                 //{
                 //    valid = true;
+                //      do stuff
+                //}
 
                 /*********************Add New Review***********************/
                 if (IsPostBack)
@@ -65,7 +67,7 @@ namespace SpoiledApples
                     db.Entry(movieInstance).State = EntityState.Modified;
 
                     db.SaveChanges();
-                    //}
+                    
                     avgStr = String.Format("{0:00.0}", avgRating.ToString());
                     Response.Redirect("Default.aspx");
                 }
