@@ -35,11 +35,11 @@
         <!--------------NEW MOVIE----------------->
         <form runat="server" method="post">
             <div class="form-group">
-                <input type="text" class="form-control" name="title" placeholder="Title" />
-                <input type="text" class="form-control" name="genre" placeholder="Genre" />
-                <input type="text" class="form-control" name="imdbURL" placeholder="IMDB URL" />
-                <input type="text" class="form-control" name="img" placeholder="Image URL" />
-                <input type="date" class="form-control" name="release" />
+                <input type="text" class="form-control validate" required="" aria-required="true" name="title" placeholder="Title" />
+                <input type="text" class="form-control validate" required="" aria-required="true" name="genre" placeholder="Genre" />
+                <input type="text" class="form-control validate" required="" aria-required="true" name="imdbURL" placeholder="IMDB URL" />
+                <input type="text" class="form-control validate" required="" aria-required="true" name="img" placeholder="Image URL" />
+                <input type="date" class="form-control validate" required="" aria-required="true" name="release" />
                 <input type="submit" class="btn btn-default" value="Save" />
             </div>
         </form>

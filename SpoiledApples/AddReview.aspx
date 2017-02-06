@@ -36,9 +36,9 @@
             <!--------------ADD NEW REVIEW----------------->
             <form runat="server" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="name" required="" placeholder="Your Name" />
+                    <input type="text" class="form-control validate" name="name" required="" aria-required="true" placeholder="Your Name" />
                     <label class="active" for="rating">Rating</label>
-                    <input type="number" class="form-control" id="rating" name="rating" />
+                    <input type="number" class="form-control validate" id="rating" required="" aria-required="true"name="rating" />
                     <%-- <% if (!valid)
                     { %>
                 <label for="rating" data-error="Invalid rating.">Rating</label>
